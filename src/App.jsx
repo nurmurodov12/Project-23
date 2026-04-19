@@ -7,6 +7,7 @@ import Basket from "./components/basket/basket";
 import About from "./components/about/about";
 import Product from "./components/products/product";
 import { useState } from "react";
+import Contact from "./components/contact/contact";
 
 function App() {
   const [basket, setBasket] = useState([]);
@@ -23,9 +24,10 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Asosiy addToCart={addToCart} />} />
-          <Route path="/products" element={<Products />} />
+          <Route path="/products" element={<Products addToCart={addToCart}/>} />
           <Route path="/basket" element={<Basket arra={basket} />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>

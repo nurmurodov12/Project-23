@@ -32,26 +32,20 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink className="text-[#70737C] text-[14px] font-normal uppercase  hover:text-[#a3a3a5]" to='/about'>
+              <NavLink
+                className="text-[#70737C] text-[14px] font-normal uppercase  hover:text-[#a3a3a5]"
+                to="/about"
+              >
                 About Ananas Market
               </NavLink>
             </li>
-            {/*  */}
             <li>
-              <a
+              <NavLink
                 className="text-[#70737C] text-[14px] font-normal uppercase hover:text-[#a3a3a5] "
-                href="#"
-              >
-                OUR BLOG
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-[#70737C] text-[14px] font-normal uppercase hover:text-[#a3a3a5] "
-                href="#"
+                to={"/contact"}
               >
                 CONTACTS
-              </a>
+              </NavLink>
             </li>
             <li>
               <a

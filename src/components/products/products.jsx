@@ -47,7 +47,6 @@ const Products = ({ addToCart }) => {
     setData(sorted);
   };
 
-
   return (
     <div className="w-[100%] h-auto pt-[70px] pb-10 pl-10">
       <div className="flex items-center gap-4">
