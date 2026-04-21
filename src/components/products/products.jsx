@@ -10,6 +10,7 @@ const Products = ({ addToCart }) => {
   useEffect(() => {
     // API data
     const fetchData = async () => {
+      setLoading(true)
       const response = await fetch(
         "https://69c558688a5b6e2dec2c41b6.mockapi.io/imtihon",
       );
@@ -17,6 +18,7 @@ const Products = ({ addToCart }) => {
       const responseJson = await response.json();
       setData(responseJson);
       setFakerData(responseJson);
+      setLoading(false)
     };
 
     fetchData();
@@ -46,6 +48,8 @@ const Products = ({ addToCart }) => {
 
     setData(sorted);
   };
+
+
 
   return (
     <div className="w-[100%] h-auto pt-[70px] pb-10 pl-10">
@@ -82,6 +86,9 @@ const Products = ({ addToCart }) => {
       </div>
 
       <div className="w-full h-auto grid grid-cols-5 pl-15 pt-[50px] gap-x-[20px] gap-y-[70px]">
+        {
+          loading? <h1 className="text-center text-5xl text-gray-600 ml-[400px]">Loading...</h1> : ""
+        }
         {data.map((val) => {
           return (
             <Product

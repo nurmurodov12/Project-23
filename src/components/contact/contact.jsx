@@ -37,7 +37,7 @@ const Contact = () => {
               className="w-full border-2 border-[#a3a3a5] p-2 rounded-[8px] outline-0"
             />
           </div>
-
+          
           <div className="flex flex-col w-full gap-2">
             <label className="font-light">Write me:</label>
             <textarea

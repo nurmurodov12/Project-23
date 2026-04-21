@@ -7,7 +7,7 @@ const Asosiy = ({ addToCart }) => {
   return (
     <div className="container pt-10">
       <div className="">
-        <div className="w-[1000px] h-auto p-[30px] bg-[#EAF1EB] rounded-[15px] flex items-center gap-10 ml-30">
+        <div className="w-[1000px] h-auto p-[30px] bg-[#EAF1EB] rounded-[15px] flex items-center gap-10 ml-30 mt-[80px]">
           <div>
             <h1 className="text-[30px] w-[650px] font-semibold">
               ANANAS MARKET Basil Seeds for Indoor and Outdoor Market

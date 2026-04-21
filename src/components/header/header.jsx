@@ -6,14 +6,14 @@ const Header = () => {
   return (
     <div className="max-w-[1400px]  h-auto mx-auto">
       <div
-        className="w-full h-auto flex justify-evenly items-center  bg-white w-full  top-0 left-0"
+        className="w-full h-auto flex justify-evenly items-center  bg-white w-full  top-0 left-0 fixed z-40"
         id="header-nav"
       >
-        <div>
+        <div >
           <img className="w-[120px]" src={logo} alt="" />
         </div>
 
-        <div>
+        <div >
           <ul className="flex gap-8">
             <li>
               <NavLink

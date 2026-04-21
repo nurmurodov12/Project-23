@@ -16,8 +16,6 @@ function App() {
     setBasket([...basket, product]);
   }
 
-  
-
   return (
     <div>
       <BrowserRouter>

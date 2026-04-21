@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Basket from "./../basket/basket";
+import { NavLink } from "react-router-dom";
 
 const Product = ({
   id,
@@ -13,7 +14,6 @@ const Product = ({
   basket,
   addToCart,
 }) => {
-  
   function productAdd() {
     const obj = {
       id: id,

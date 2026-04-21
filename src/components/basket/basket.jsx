@@ -4,10 +4,19 @@ import Product from "./../products/product";
 import Basketproduct from "./basketproduct";
 
 const Basket = (props) => {
-  const product = props.arra;
+  const [product, setProduct] = useState(props.arra);
+  const [fakerProduct, setFakerProduct] = useState(props.arra);
+
+  const deleteProduct = (id) => {
+    const filterItem = product.filter((val) => {
+      return val.id !== id;
+    });
+
+    setProduct(filterItem);
+  };
 
   return (
-    <div className="container pb-6">
+    <div className="container pb-6 mt-[100px]">
       <div className="flex  items-center gap-5 p-7">
         <h1 className="text-2xl">
           Savatingiz,{" "}
@@ -35,6 +44,8 @@ const Basket = (props) => {
               description={val.description}
               newprice={val.newprice}
               oldprice={val.newprice}
+              id={val.id}
+              deleteProduct={deleteProduct}
             />
           );
         })}

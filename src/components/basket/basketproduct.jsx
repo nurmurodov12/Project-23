@@ -1,6 +1,14 @@
 import React from "react";
 
-const Basketproduct = ({ image, description, newprice, oldprice }) => {
+const Basketproduct = ({id, image, description, newprice, oldprice,deleteProduct }) => {
+    
+  function fromBasketDelete() {
+    deleteProduct(id)
+  }
+
+  console.log(id);
+  
+
   return (
     <div className="w-[70%] h-auto justify-evenly p-3 rounded-[12px]" id="basket">
       <div className="flex  justify-evenly  items-center ">
@@ -17,7 +25,11 @@ const Basketproduct = ({ image, description, newprice, oldprice }) => {
             {oldprice} so'm
           </p>
           <p className="text-3xl text-[#7f4dff] pt-2"> {newprice} so'm</p>
+        <button className="cursor-pointer" onClick={fromBasketDelete}>
+          <i className="fa-solid fa-trash text-red-500"></i>
+        </button>
         </div>
+
       </div>
     </div>
   );
